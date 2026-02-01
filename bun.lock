@@ -5,6 +5,7 @@
     "": {
       "name": "sports-scores-agent",
       "dependencies": {
+        "@lucid-agents/analytics": "latest",
         "@lucid-agents/core": "latest",
         "@lucid-agents/hono": "latest",
         "@lucid-agents/http": "latest",
@@ -47,6 +48,8 @@
 
     "@lucid-agents/a2a": ["@lucid-agents/a2a@0.5.4", "", { "dependencies": { "@lucid-agents/types": "^1.5.6", "zod": "^4.1.12" } }, "sha512-sKo/vedjecrJxaZiTQuBzlYmZSJvtF1EQQ0Q+sv/5orj8x9NAFEGbBtZa6SyE4jhw+XbmdDM7tXJ8fPWQuif8A=="],
 
+    "@lucid-agents/analytics": ["@lucid-agents/analytics@0.2.6", "", { "dependencies": { "@lucid-agents/types": "^1.5.7", "viem": "^2.41.2" } }, "sha512-V/DXjCwzLj0uAm92IBACKEgbNF1/5oaLyHXyrF+CfWryFdKPQY41Idbb7DOuwR08idb1Js4lvfjO1hO74jx+PQ=="],
+
     "@lucid-agents/ap2": ["@lucid-agents/ap2@0.3.7", "", { "dependencies": { "@lucid-agents/types": "^1.5.6" } }, "sha512-YZc2K6m5lqcgQ1oroo4xCgF4JKbuwWAWvjbqj8QxcfV+8QnasidbVTuiA1CGTY2wK7W+16kibm93eWrfThWBbg=="],
 
     "@lucid-agents/core": ["@lucid-agents/core@2.1.2", "", { "dependencies": { "@ax-llm/ax": "^14.0.37", "@ax-llm/ax-tools": "^14.0.37", "@lucid-agents/a2a": "^0.5.4", "@lucid-agents/payments": "^2.1.2", "@lucid-agents/types": "^1.5.6", "@lucid-dreams/agent-auth": "latest", "@lucid-dreams/client": "latest", "hono": "4.10.1", "viem": "^2.41.2", "x402": "^0.7.3", "x402-fetch": "^0.7.3", "zod": "^4.1.12" } }, "sha512-ZuQ8JdkxxtfACorJT5vin/C0KOgWmhq75AJQJMmPGqpNwI8FODkuDVKhXev5IX9x+OL5Nn3etPi/05wXoCjGNA=="],
@@ -57,7 +60,7 @@
 
     "@lucid-agents/payments": ["@lucid-agents/payments@2.1.2", "", { "dependencies": { "@ax-llm/ax": "^14.0.31", "@lucid-agents/types": "^1.5.6", "pg": "^8.13.1", "viem": "^2.41.2", "x402": "^0.7.3", "x402-fetch": "^0.7.3", "zod": "^4.1.12" } }, "sha512-JjByihNJFv+zhiUb8tDMnCsrG0/CGZ2cakwVLwCoBXBIyskd9Piuu9nG7n/Xh/dkjVWmuNPm85P7UvcYPbE2DQ=="],
 
-    "@lucid-agents/types": ["@lucid-agents/types@1.5.6", "", { "peerDependencies": { "viem": "^2.41.2", "zod": "^4.0.0" } }, "sha512-8cGcSx2rf5iZWVhzPcshBGIRQrtc4Ikhp43f6zXnGAvo4cWIeup2VrJcX6JN+e+6ailDR2PUv1but/iwjl6+XQ=="],
+    "@lucid-agents/types": ["@lucid-agents/types@1.5.7", "", { "peerDependencies": { "viem": "^2.41.2", "zod": "^4.0.0" } }, "sha512-kjKuJ6stsb/foIbXiCrAeb4e96QegTeloljBl2j6R3Tn2HYBbvF5MaCSGENNKv9jh/T2aTEPe+APNX3v6q1ZZw=="],
 
     "@lucid-dreams/agent-auth": ["@lucid-dreams/agent-auth@0.2.24", "", { "dependencies": { "@lucid-dreams/sdk": "^0.2.24", "viem": "^2.38.5" } }, "sha512-QiJQ2FTJXtd1o6c1fkEq/qawBJbhZdmGukwt+B8LztTmjjkdhfRZvWbNk3DUBIZIPsbInWdwbgPAUkzGMUNyDg=="],
 
@@ -819,11 +822,23 @@
 
     "@coinbase/wallet-sdk/zustand": ["zustand@5.0.3", "", { "peerDependencies": { "@types/react": ">=18.0.0", "immer": ">=9.0.6", "react": ">=18.0.0", "use-sync-external-store": ">=1.2.0" }, "optionalPeers": ["@types/react", "immer", "react", "use-sync-external-store"] }, "sha512-14fwWQtU3pH4dE0dOpdMiWjddcH+QzKIgk1cl8epwSE7yag43k/AD/m4L6+K7DytAOr9gGBe3/EXj9g7cdostg=="],
 
+    "@lucid-agents/a2a/@lucid-agents/types": ["@lucid-agents/types@1.5.6", "", { "peerDependencies": { "viem": "^2.41.2", "zod": "^4.0.0" } }, "sha512-8cGcSx2rf5iZWVhzPcshBGIRQrtc4Ikhp43f6zXnGAvo4cWIeup2VrJcX6JN+e+6ailDR2PUv1but/iwjl6+XQ=="],
+
+    "@lucid-agents/ap2/@lucid-agents/types": ["@lucid-agents/types@1.5.6", "", { "peerDependencies": { "viem": "^2.41.2", "zod": "^4.0.0" } }, "sha512-8cGcSx2rf5iZWVhzPcshBGIRQrtc4Ikhp43f6zXnGAvo4cWIeup2VrJcX6JN+e+6ailDR2PUv1but/iwjl6+XQ=="],
+
+    "@lucid-agents/core/@lucid-agents/types": ["@lucid-agents/types@1.5.6", "", { "peerDependencies": { "viem": "^2.41.2", "zod": "^4.0.0" } }, "sha512-8cGcSx2rf5iZWVhzPcshBGIRQrtc4Ikhp43f6zXnGAvo4cWIeup2VrJcX6JN+e+6ailDR2PUv1but/iwjl6+XQ=="],
+
     "@lucid-agents/core/hono": ["hono@4.10.1", "", {}, "sha512-rpGNOfacO4WEPClfkEt1yfl8cbu10uB1lNpiI33AKoiAHwOS8lV748JiLx4b5ozO/u4qLjIvfpFsPXdY5Qjkmg=="],
+
+    "@lucid-agents/hono/@lucid-agents/types": ["@lucid-agents/types@1.5.6", "", { "peerDependencies": { "viem": "^2.41.2", "zod": "^4.0.0" } }, "sha512-8cGcSx2rf5iZWVhzPcshBGIRQrtc4Ikhp43f6zXnGAvo4cWIeup2VrJcX6JN+e+6ailDR2PUv1but/iwjl6+XQ=="],
 
     "@lucid-agents/hono/hono": ["hono@4.10.1", "", {}, "sha512-rpGNOfacO4WEPClfkEt1yfl8cbu10uB1lNpiI33AKoiAHwOS8lV748JiLx4b5ozO/u4qLjIvfpFsPXdY5Qjkmg=="],
 
+    "@lucid-agents/http/@lucid-agents/types": ["@lucid-agents/types@1.5.6", "", { "peerDependencies": { "viem": "^2.41.2", "zod": "^4.0.0" } }, "sha512-8cGcSx2rf5iZWVhzPcshBGIRQrtc4Ikhp43f6zXnGAvo4cWIeup2VrJcX6JN+e+6ailDR2PUv1but/iwjl6+XQ=="],
+
     "@lucid-agents/http/hono": ["hono@4.10.1", "", {}, "sha512-rpGNOfacO4WEPClfkEt1yfl8cbu10uB1lNpiI33AKoiAHwOS8lV748JiLx4b5ozO/u4qLjIvfpFsPXdY5Qjkmg=="],
+
+    "@lucid-agents/payments/@lucid-agents/types": ["@lucid-agents/types@1.5.6", "", { "peerDependencies": { "viem": "^2.41.2", "zod": "^4.0.0" } }, "sha512-8cGcSx2rf5iZWVhzPcshBGIRQrtc4Ikhp43f6zXnGAvo4cWIeup2VrJcX6JN+e+6ailDR2PUv1but/iwjl6+XQ=="],
 
     "@metamask/eth-json-rpc-provider/@metamask/json-rpc-engine": ["@metamask/json-rpc-engine@7.3.3", "", { "dependencies": { "@metamask/rpc-errors": "^6.2.1", "@metamask/safe-event-emitter": "^3.0.0", "@metamask/utils": "^8.3.0" } }, "sha512-dwZPq8wx9yV3IX2caLi9q9xZBw2XeIoYqdyihDDDpuHVCEiqadJLwqM3zy+uwf6F1QYQ65A8aOMQg1Uw7LMLNg=="],
 
